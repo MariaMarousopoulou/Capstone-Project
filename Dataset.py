@@ -74,6 +74,4 @@ df1['seconds'] = df1['days'].map(seconds_map)
 
 # calculate result
 res = df1.groupby(['days', 'seconds','sessions'], as_index=False)['avg_time'].sum()
-#res['duration'] = res['hours'] / res['sessions']
-#res['amount'] = res['new'] / res['sessions']
 print(res)
