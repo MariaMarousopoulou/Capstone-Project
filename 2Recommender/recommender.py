@@ -14,8 +14,8 @@ import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
 
 # read the data
-data = pd.read_csv('mini_dataset.csv')
-# data = pd.read_csv('../dressipi_recsys2022/dataset.csv')
+# data = pd.read_csv('mini_dataset.csv')
+data = pd.read_csv('../dressipi_recsys2022/dataset.csv')
 data = data.sort_values(by=['session_id', 'item_id', 'date'], ignore_index=True)
 # print("DataFrame is:\n", data.head())
 

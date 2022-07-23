@@ -41,8 +41,8 @@ df = pd.pivot_table(itemFeatures, index='item_id', columns='feature_category_id'
 newdf = labels.merge(df, left_on='item_id', right_on='item_id')
 
 # extract
-# newdf.to_csv('fulldata.csv', index=False)  # don't
-newdf.head(200000).to_csv('minidata.csv', index=False)
+newdf.to_csv('dataset.csv', index=False)  # don't
+# newdf.head(200000).to_csv('minidata.csv', index=False)
 
 
 # creating new custom features
