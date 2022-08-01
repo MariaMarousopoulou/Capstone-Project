@@ -152,7 +152,7 @@ for (u, c), y in get_dataset(train, products, 10):
 
 model = SimpleRecommender(miniSessions, products, 15)
 model.compile(loss=tf.keras.losses.CategoricalCrossentropy(from_logits=True),
-              optimizer=tf.keras.optimizers.SGD(learning_rate=100.),
+              optimizer=tf.keras.optimizers.SGD(learning_rate=0.2),
               metrics=[tf.keras.metrics.CategoricalAccuracy()])
 
 model.fit(get_dataset(train, products, 100), validation_data=get_dataset(valid, products, 100), epochs=5)
